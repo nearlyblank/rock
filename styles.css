@@ -4,17 +4,20 @@
   }
 
 * {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-family: LCD;
-    /* outline: 1px solid red; */
 }
 
-.outcome {
-    font-size: 2rem;
+body {
+    background-color: lightgoldenrodyellow;
 }
 
 .container {
     margin: 0 auto;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .btn-container {
@@ -23,13 +26,50 @@
     height: auto;
     display: flex;
     gap: 1rem;
+    justify-content: space-between;
 }
 
-div {
-    width: 60%;
-    height: 2rem;
+.c-selection {
+    margin: 2rem 0 3rem 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 .scissors-btn, .rock-btn, .paper-btn {
-    height: 6rem;
+    width: 7rem;
+    max-width: 7rem;
+    font-size: 1.2rem;
+    padding: .4rem;
 }
+
+img {
+    width: 100%;
+}
+
+.score {
+    width: 100%;
+    margin: .3rem 0 .3rem;
+}
+
+
+.play-again {
+    margin-top: 1rem;
+    max-width: 12rem;
+    padding: .4rem;
+}
+
+.outcome {
+    font-size: 2rem;
+    margin: 2rem 0 3rem 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+   .container {
+      width: 85%;
+    }
+
+    * {
+        font-size: 1rem;
+    }
+  }
