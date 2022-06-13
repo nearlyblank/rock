@@ -44,7 +44,7 @@ function playRound() {
     if (playerSelection === "scissors") {
         if (computerSelection() === "paper") {
             pCounter++;
-            cChoice[0].textContent = "The computer chose paper, you win!";
+            cChoice[0].textContent = "The computer chose paper, you win.";
         }
         else if (computerSelection() === "rock") {
             cCounter++;
@@ -63,7 +63,7 @@ function playRound() {
         }
         else if (computerSelection() === "rock") {
             pCounter++;
-            cChoice[0].textContent = "The computer chose rock, you win!";
+            cChoice[0].textContent = "The computer chose rock, you win.";
         }
         else {
             cCounter++;
@@ -82,12 +82,12 @@ function playRound() {
         }
         else {
             pCounter++;
-            cChoice[0].textContent = "The computer chose scissors, you win!";
+            cChoice[0].textContent = "The computer chose scissors, you win.";
         }
     }
 
     if (pCounter === 5) {
-        outcome[0].textContent = "Game over, you win!";
+        outcome[0].textContent = "Game over, you win.";
         outcome[0].style.color = "green";
         pCounter = 0;
         cCounter = 0;
