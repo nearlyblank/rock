@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "LCD";
+    src: url('lcd.ttf');
+  }
+
+* {
+    font-size: 1rem;
+    font-family: LCD;
+    /* outline: 1px solid red; */
+}
+
+.outcome {
+    font-size: 2rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.btn-container {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+div {
+    width: 60%;
+    height: 2rem;
+}
+
+.scissors-btn, .rock-btn, .paper-btn {
+    height: 6rem;
+}
