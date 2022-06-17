@@ -33,10 +33,16 @@ playAgain[0].addEventListener('click', () => {
 
 
 function computerSelection() {
-    let randomNumber = Math.floor(Math.random()*(3)); //random number between 1 and 3 for array selection in computerSelection
+    let randomNumber = Math.floor(Math.random()*(3)); //random number between 0 and 2 for array selection in computerSelection
     let choices = ['rock', 'paper', 'scissors']; 
     let computerPlay = choices[randomNumber]; //selects item from array
     return computerPlay;
+}
+
+function buttonDisable() {
+    rock[0].disabled = true;
+    paper[0].disabled = true;
+    scissors[0].disabled = true;
 }
 
 
@@ -93,6 +99,7 @@ function playRound() {
         cCounter = 0;
         drawCounter = 0;
         cChoice[0].textContent = "";
+        buttonDisable();
     }
 
     if (cCounter === 5) {
@@ -102,6 +109,7 @@ function playRound() {
         cCounter = 0;
         drawCounter = 0;
         cChoice[0].textContent = "";
+        buttonDisable();
     }
 
 pScore[0].textContent = `${pCounter}`;
