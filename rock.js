@@ -28,7 +28,7 @@ scissors[0].addEventListener('click', () => {
 
 const playAgain = document.getElementsByClassName('play-again');
 playAgain[0].addEventListener('click', () => {
-    window.location.reload(); //how to make playAgain work without refreshing?
+    restartGame();
 });
 
 
@@ -39,11 +39,26 @@ function computerSelection() {
     return computerPlay;
 }
 
+function scoreReset() {
+    pCounter = 0;
+    cCounter = 0;
+    drawCounter = 0;
+}
+
 function buttonDisable() {
     rock[0].disabled = true;
     paper[0].disabled = true;
     scissors[0].disabled = true;
 }
+
+function restartGame() {
+    scoreReset();
+    outcome[0].textContent = '';
+    rock[0].disabled = false;
+    paper[0].disabled = false;
+    scissors[0].disabled = false;
+}
+
 
 
 function playRound() {
@@ -95,20 +110,16 @@ function playRound() {
     if (pCounter === 5) {
         outcome[0].textContent = "Game over, you win.";
         outcome[0].style.color = "green";
-        pCounter = 0;
-        cCounter = 0;
-        drawCounter = 0;
         cChoice[0].textContent = "";
+        scoreReset();
         buttonDisable();
     }
 
     if (cCounter === 5) {
         outcome[0].textContent = "Game over, you lose.";
         outcome[0].style.color = "red";
-        pCounter = 0;
-        cCounter = 0;
-        drawCounter = 0;
         cChoice[0].textContent = "";
+        scoreReset();
         buttonDisable();
     }
 
