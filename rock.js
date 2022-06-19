@@ -46,6 +46,7 @@ function scoreReset() {
     pScore[0].textContent = '0';
     cScore[0].textContent = '0';
     drawScore[0].textContent = '0';
+    cChoice[0].textContent = '';
 }
 
 function buttonDisable() {
