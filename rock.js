@@ -43,6 +43,9 @@ function scoreReset() {
     pCounter = 0;
     cCounter = 0;
     drawCounter = 0;
+    pScore[0].textContent = '0';
+    cScore[0].textContent = '0';
+    drawScore[0].textContent = '0';
 }
 
 function buttonDisable() {
@@ -111,7 +114,6 @@ function playRound() {
         outcome[0].textContent = "Game over, you win.";
         outcome[0].style.color = "green";
         cChoice[0].textContent = "";
-        scoreReset();
         buttonDisable();
     }
 
@@ -119,7 +121,6 @@ function playRound() {
         outcome[0].textContent = "Game over, you lose.";
         outcome[0].style.color = "red";
         cChoice[0].textContent = "";
-        scoreReset();
         buttonDisable();
     }
 
