@@ -112,14 +112,14 @@ function playRound() {
     }
 
     if (pCounter === 5) {
-        outcome[0].textContent = "Game over, you win.";
+        outcome[0].textContent = "You Win";
         outcome[0].style.color = "green";
         cChoice[0].textContent = "";
         buttonDisable();
     }
 
     if (cCounter === 5) {
-        outcome[0].textContent = "Game over, you lose.";
+        outcome[0].textContent = "You Lose";
         outcome[0].style.color = "red";
         cChoice[0].textContent = "";
         buttonDisable();
